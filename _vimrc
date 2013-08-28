@@ -17,3 +17,5 @@ if has('gui_running')
 else
   colorscheme wombat
 endif
+
+set smartcase
