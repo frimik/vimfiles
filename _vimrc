@@ -18,4 +18,5 @@ else
   colorscheme wombat
 endif
 
+set ignorecase
 set smartcase
