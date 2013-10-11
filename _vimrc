@@ -24,3 +24,8 @@ set smartcase
 " Navigate tabs with Alt-left/right
 nnoremap <M-Left> gT
 nnoremap <M-Right> gt
+
+" Share register x between active Vim windows.
+vmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo
+nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
+
