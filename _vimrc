@@ -20,3 +20,7 @@ endif
 
 set ignorecase
 set smartcase
+
+# Navigate tabs with Alt-left/right
+nnoremap <M-Left> gT
+nnoremap <M-Right> gt
