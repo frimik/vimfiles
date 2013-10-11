@@ -34,3 +34,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-chef"]
+	path = bundle/vim-chef
+	url = https://github.com/vadv/vim-chef
