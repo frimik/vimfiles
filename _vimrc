@@ -42,3 +42,6 @@ nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
 
 " Convenient toggle for NERDTree
 nmap <silent> <F3> :NERDTreeToggle<CR>
+
+" Chef
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
