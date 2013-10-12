@@ -40,3 +40,5 @@ nnoremap <M-Right> gt
 vmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo
 nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
 
+" Convenient toggle for NERDTree
+nmap <silent> <F3> :NERDTreeToggle<CR>
