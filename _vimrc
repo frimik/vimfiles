@@ -44,4 +44,5 @@ nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " Chef
-autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+autocmd FileType ruby set filetype=ruby.eruby.chef
+autocmd FileType eruby set filetype=eruby.chef
