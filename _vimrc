@@ -19,8 +19,17 @@ if has('gui_running')
   set lines=50 columns=128
 else
   colorscheme wombat
+
+  " Fix some colors in terminal ...
+  highlight Visual ctermbg=5
+
+  highlight Pmenu ctermbg=13
+  highlight PmenuSel ctermbg=7
+  highlight PmenuSbar ctermbg=7
 endif
 
+
+" smartcase searching ...
 set ignorecase
 set smartcase
 
@@ -38,3 +47,10 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 " Chef
 autocmd FileType ruby set filetype=ruby.eruby.chef
 autocmd FileType eruby set filetype=eruby.chef
+
+" Omnicomplete and SuperTab settings
+set omnifunc=syntaxcomplete#Complete
+
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
+
