@@ -19,14 +19,6 @@ if has('gui_running')
   set lines=50 columns=128
 else
   colorscheme wombat
-
-  " initial window size
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=128
-  endif
 endif
 
 set ignorecase
