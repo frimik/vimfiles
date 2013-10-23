@@ -51,6 +51,12 @@ autocmd FileType eruby set filetype=eruby.chef
 " Omnicomplete and SuperTab settings
 set omnifunc=syntaxcomplete#Complete
 
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
