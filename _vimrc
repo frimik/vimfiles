@@ -60,3 +60,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
+" http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/
+
