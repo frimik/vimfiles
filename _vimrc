@@ -39,7 +39,19 @@ Plugin 'vadv/vim-chef'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-sensible'
+Plugin 'python.vim'
 Plugin 'pythonhelper'
+
+Plugin 'Lokaltog/vim-distinguished'
+
+
+" The vim-kolor colorscheme from https://github.com/zeis/vim-kolor
+Plugin 'zeis/vim-kolor'
+let g:kolor_italic=1                    " Enable italic. Default: 1
+let g:kolor_bold=1                      " Enable bold. Default: 1
+let g:kolor_underlined=0                " Enable underline. Default: 0
+let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
+colorscheme kolor
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -61,7 +73,6 @@ set expandtab
 set shiftwidth=2
 
 if has('gui_running')
-  colorscheme wombat256mod
   set guifont=Consolas:h11:cDEFAULT
 
   " remove (m)enu bar, (T)ool bar and (r)ight-hand scroll bar:
@@ -72,14 +83,7 @@ if has('gui_running')
   " initial window size
   set lines=50 columns=128
 else
-  colorscheme wombat
 
-  " Fix some colors in terminal ...
-  highlight Visual ctermbg=5
-
-  highlight Pmenu ctermbg=13
-  highlight PmenuSel ctermbg=7
-  highlight PmenuSbar ctermbg=7
 endif
 
 
