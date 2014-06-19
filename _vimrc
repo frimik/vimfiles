@@ -44,6 +44,13 @@ Plugin 'pythonhelper'
 
 Plugin 'Lokaltog/vim-distinguished'
 
+Plugin 'CountJump'
+Plugin 'ingo-library'
+Plugin 'ConflictMotions'
+
+Plugin 'elzr/vim-json'
+
+Plugin 'tpope/vim-markdown'
 
 " The vim-kolor colorscheme from https://github.com/zeis/vim-kolor
 Plugin 'zeis/vim-kolor'
@@ -123,4 +130,18 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
+
+" minor tag jump fix
+" http://tartley.com/?p=1277
+" go to defn of tag under the cursor
+fun! MatchCaseTag()
+    let ic = &ic
+    set noic
+    try
+        exe 'tjump ' . expand('<cword>')
+    finally
+       let &ic = ic
+    endtry
+endfun
+nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
 
