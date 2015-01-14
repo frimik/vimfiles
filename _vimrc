@@ -39,8 +39,8 @@ Plugin 'vadv/vim-chef'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-sensible'
-Plugin 'python.vim'
-Plugin 'pythonhelper'
+"Plugin 'python.vim'
+"Plugin 'pythonhelper'
 
 Plugin 'Lokaltog/vim-distinguished'
 
@@ -51,6 +51,8 @@ Plugin 'ConflictMotions'
 Plugin 'elzr/vim-json'
 
 Plugin 'tpope/vim-markdown'
+
+Plugin 'klen/python-mode'
 
 " The vim-kolor colorscheme from https://github.com/zeis/vim-kolor
 Plugin 'zeis/vim-kolor'
@@ -120,8 +122,8 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType python setlocal shiftwidth=4
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal shiftwidth=4
 
 " http://vim.wikia.com/wiki/Omni_completion_popup_menu
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
