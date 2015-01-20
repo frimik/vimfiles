@@ -40,11 +40,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'vadv/vim-chef'
 
-Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-sensible'
-"Plugin 'python.vim'
-"Plugin 'pythonhelper'
 
 Plugin 'Lokaltog/vim-distinguished'
 
@@ -58,13 +55,43 @@ Plugin 'tpope/vim-markdown'
 
 Plugin 'klen/python-mode'
 
-" The vim-kolor colorscheme from https://github.com/zeis/vim-kolor
-Plugin 'zeis/vim-kolor'
-let g:kolor_italic=1                    " Enable italic. Default: 1
-let g:kolor_bold=1                      " Enable bold. Default: 1
-let g:kolor_underlined=0                " Enable underline. Default: 0
-let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
-colorscheme kolor
+
+" https://justin.abrah.ms/vim/vim_and_python.html
+" NERD_tree
+Plugin 'scrooloose/nerdtree'
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
+map <silent> <F3> :NERDTreeToggle<CR>
+"nmap <silent> <F3> :NERDTreeToggle<CR>
+
+
+" TagList Plugin Configuration
+Plugin 'frimik/taglist.vim'
+set tags=tags;$HOME/.vim/tags/
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+map <F7> :TlistToggle<CR>
+
+set showcmd
+let mapleader = ","
+
+" Viewport Controls
+" ie moving between split panes
+map <silent><Leader>h <C-w>h
+map <silent><Leader>j <C-w>j
+map <silent><Leader>k <C-w>k
+map <silent><Leader>l <C-w>l
+
+
+" Adaptations of the molokai colorscheme
+Plugin 'sentientmachine/Pretty-Vim-Python'
+colorscheme molokai
+
+Plugin 'vim-scripts/EasyGrep'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -109,11 +136,8 @@ nnoremap <M-Left> gT
 nnoremap <M-Right> gt
 
 " Share register x between active Vim windows.
-vmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo
-nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
-
-" Convenient toggle for NERDTree
-nmap <silent> <F3> :NERDTreeToggle<CR>
+vmap <silent> <Leader>y "xy<CR>:wviminfo! ~/.viminfo
+nmap <silent> <Leader>p :rviminfo! ~/.viminfo<CR>"xp
 
 " Chef
 autocmd FileType ruby set filetype=ruby.eruby.chef
