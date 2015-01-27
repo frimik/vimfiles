@@ -55,12 +55,14 @@ Plugin 'tpope/vim-markdown'
 
 Plugin 'klen/python-mode'
 
+Plugin 'file://$HOME/.vim/write_register'
+
 
 " https://justin.abrah.ms/vim/vim_and_python.html
 " NERD_tree
 Plugin 'scrooloose/nerdtree'
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 map <silent> <F3> :NERDTreeToggle<CR>
@@ -174,4 +176,13 @@ fun! MatchCaseTag()
     endtry
 endfun
 nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
+
+
+" writes the default register (") to a file in the home directory
+function! WriteRegister()
+  call writefile([@"], expand("/vagrant/vimregister.txt"), "b")
+endfunction
+
+com! -nargs=0 -bang WriteRegister
+\ call WriteRegister()
 
