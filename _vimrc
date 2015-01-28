@@ -25,9 +25,6 @@ Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" scripts from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-Plugin 'FuzzyFinder'
 " scripts not on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -180,7 +177,7 @@ nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
 
 " writes the default register (") to a file in the home directory
 function! WriteRegister()
-  call writefile([@"], expand("/vagrant/vimregister.txt"), "b")
+  call writefile(split(@", "\n"), expand("/vagrant/vimregister.txt"))
 endfunction
 
 com! -nargs=0 -bang WriteRegister
