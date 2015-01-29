@@ -52,7 +52,7 @@ Plugin 'tpope/vim-markdown'
 
 Plugin 'klen/python-mode'
 
-Plugin 'file://$HOME/.vim/write_register'
+Plugin 'frimik/vim-winclipper', {'rtp': 'vim/'}
 
 
 " https://justin.abrah.ms/vim/vim_and_python.html
@@ -173,13 +173,4 @@ fun! MatchCaseTag()
     endtry
 endfun
 nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
-
-
-" writes the default register (") to a file in the home directory
-function! WriteRegister()
-  call writefile(split(@", "\n"), expand("/vagrant/vimregister.txt"))
-endfunction
-
-com! -nargs=0 -bang WriteRegister
-\ call WriteRegister()
 
