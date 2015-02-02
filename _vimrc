@@ -8,7 +8,7 @@ if has("unix") && !has("win32unix")
 else
   set rtp+=~/vimfiles/bundle/vundle/
 endif
-call vundle#rc()
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -58,40 +58,18 @@ Plugin 'frimik/vim-winclipper', {'rtp': 'vim/'}
 " https://justin.abrah.ms/vim/vim_and_python.html
 " NERD_tree
 Plugin 'scrooloose/nerdtree'
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-let NERDTreeShowBookmarks=1
-map <silent> <F3> :NERDTreeToggle<CR>
-"nmap <silent> <F3> :NERDTreeToggle<CR>
-
 
 " TagList Plugin Configuration
 Plugin 'frimik/taglist.vim'
-set tags=tags;$HOME/.vim/tags/
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
-map <F7> :TlistToggle<CR>
-
-set showcmd
-let mapleader = ","
-
-" Viewport Controls
-" ie moving between split panes
-map <silent><Leader>h <C-w>h
-map <silent><Leader>j <C-w>j
-map <silent><Leader>k <C-w>k
-map <silent><Leader>l <C-w>l
-
 
 " Adaptations of the molokai colorscheme
 Plugin 'sentientmachine/Pretty-Vim-Python'
-colorscheme molokai
 
 Plugin 'vim-scripts/EasyGrep'
 
+Plugin 'bling/vim-airline'
+
+call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -106,6 +84,31 @@ filetype plugin indent on     " required
 " NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
 
+" Viewport Controls
+" ie moving between split panes
+map <silent><Leader>h <C-w>h
+map <silent><Leader>j <C-w>j
+map <silent><Leader>k <C-w>k
+map <silent><Leader>l <C-w>l
+
+set tags=tags;$HOME/.vim/tags/
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_File_Fold_Auto_Close = 1
+map <F7> :TlistToggle<CR>
+
+set showcmd
+let mapleader = ","
+
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
+map <silent> <F3> :NERDTreeToggle<CR>
+"nmap <silent> <F3> :NERDTreeToggle<CR>
+
+colorscheme molokai
 
 set ts=2
 set expandtab
