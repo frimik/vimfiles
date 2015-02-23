@@ -59,8 +59,7 @@ Plugin 'frimik/vim-winclipper', {'rtp': 'vim/'}
 " NERD_tree
 Plugin 'scrooloose/nerdtree'
 
-" TagList Plugin Configuration
-Plugin 'frimik/taglist.vim'
+Plugin 'majutsushi/tagbar'
 
 " Adaptations of the molokai colorscheme
 Plugin 'sentientmachine/Pretty-Vim-Python'
@@ -68,6 +67,9 @@ Plugin 'sentientmachine/Pretty-Vim-Python'
 Plugin 'vim-scripts/EasyGrep'
 
 Plugin 'bling/vim-airline'
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -91,12 +93,18 @@ map <silent><Leader>j <C-w>j
 map <silent><Leader>k <C-w>k
 map <silent><Leader>l <C-w>l
 
-set tags=tags;$HOME/.vim/tags/
+" search tags before cscope database(s)
+" https://bugzilla.redhat.com/show_bug.cgi?id=143039
+set csto=1
+
+"set tags=tags;$HOME/.vim/tags/
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 map <F7> :TlistToggle<CR>
+" Tagbar config
+nmap <F8> :TagbarToggle<CR>
 
 set showcmd
 let mapleader = ","
@@ -176,4 +184,5 @@ fun! MatchCaseTag()
     endtry
 endfun
 nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
+
 
