@@ -99,11 +99,16 @@ map <silent><Leader>l <C-w>l
 set csto=1
 
 "set tags=tags;$HOME/.vim/tags/
+" vim-easytags
+let g:easytags_dynamic_files = 2
+
+" taglist, (currently replaced by tagbar plugin)
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 map <F7> :TlistToggle<CR>
+
 " Tagbar config
 nmap <F8> :TagbarToggle<CR>
 
@@ -191,5 +196,8 @@ fun! MatchCaseTag()
     endtry
 endfun
 nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
+
+" PymodeVirtualenv autodetect ...
+let g:pymode_virtualenv = 1
 
 
