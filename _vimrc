@@ -100,7 +100,8 @@ set csto=1
 
 "set tags=tags;$HOME/.vim/tags/
 " vim-easytags
-let g:easytags_dynamic_files = 2
+let g:easytags_dynamic_files = 1
+set cpoptions += "d"
 
 " taglist, (currently replaced by tagbar plugin)
 let Tlist_GainFocus_On_ToggleOpen = 1
