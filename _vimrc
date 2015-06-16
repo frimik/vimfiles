@@ -165,9 +165,7 @@ nmap <silent> <Leader>p :rviminfo! ~/.viminfo<CR>"xp
 " Chef
 autocmd FileType ruby set filetype=ruby.eruby.chef
 autocmd FileType eruby set filetype=eruby.chef
-autocmd BufNewFile,BufRead Gemfile set filetype=ruby
-autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
-autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+autocmd BufRead,BufNewFile {Gemfile,Vagrantfile,Berksfile} set ft=ruby
 
 " Omnicomplete and SuperTab settings
 set omnifunc=syntaxcomplete#Complete
