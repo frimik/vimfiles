@@ -23,7 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 " scripts not on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -51,7 +51,7 @@ Plugin 'tpope/vim-markdown'
 
 Plugin 'klen/python-mode'
 
-Plugin 'frimik/vim-winclipper', {'rtp': 'vim/'}
+Plugin 'frimik/vim-winclipper', {'rtp': 'vim'}
 
 
 " https://justin.abrah.ms/vim/vim_and_python.html
