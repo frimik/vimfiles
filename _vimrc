@@ -201,5 +201,7 @@ nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
 
 " PymodeVirtualenv autodetect ...
 let g:pymode_virtualenv = 1
+" workaround for https://github.com/klen/python-mode/issues/342
+let g:pymode_rope_lookup_project = 0
 
 
