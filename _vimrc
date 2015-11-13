@@ -72,6 +72,10 @@ Plugin 'xolox/vim-easytags'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
+Plugin 'nginx/nginx', {'rtp': 'contrib/vim/'}
+
+Plugin 'godlygeek/tabular'
+
 call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -153,6 +157,9 @@ endif
 " smartcase searching ...
 set ignorecase
 set smartcase
+
+" number the lines
+set number
 
 " Navigate tabs with Alt-left/right
 nnoremap <M-Left> gT
