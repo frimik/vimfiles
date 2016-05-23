@@ -76,6 +76,9 @@ Plugin 'nginx/nginx', {'rtp': 'contrib/vim/'}
 
 Plugin 'godlygeek/tabular'
 
+" .aurora syntax plugin
+Plugin 'grimreaper/vim-aurora-syntax'
+
 call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
@@ -127,7 +130,7 @@ let NERDTreeShowBookmarks=1
 map <silent> <F3> :NERDTreeToggle<CR>
 "nmap <silent> <F3> :NERDTreeToggle<CR>
 
-colorscheme molokai
+silent! colorscheme molokai
 set background=dark
 " fix colors for indentline
 let g:indent_guides_auto_colors = 0
