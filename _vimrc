@@ -143,6 +143,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
 set ts=2
 set expandtab
 set shiftwidth=2
+set smartindent
 
 if has('gui_running')
   set guifont=Consolas:h11:cDEFAULT
