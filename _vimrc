@@ -79,6 +79,8 @@ Plugin 'godlygeek/tabular'
 " .aurora syntax plugin
 Plugin 'grimreaper/vim-aurora-syntax'
 
+Plugin 'hashivim/vim-terraform'
+
 call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
