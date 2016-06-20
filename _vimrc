@@ -217,4 +217,7 @@ let g:pymode_virtualenv = 1
 " workaround for https://github.com/klen/python-mode/issues/342
 let g:pymode_rope_lookup_project = 0
 
-
+" easier moving of code blocks
+" https://www.youtube.com/watch?v=YhqsjUUHj6g
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
