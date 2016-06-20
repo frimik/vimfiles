@@ -221,3 +221,9 @@ let g:pymode_rope_lookup_project = 0
 " https://www.youtube.com/watch?v=YhqsjUUHj6g
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
+
+" ctrlp settings
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
