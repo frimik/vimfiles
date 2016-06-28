@@ -69,7 +69,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'klen/python-mode'
 
 Plugin 'frimik/vim-winclipper', {'rtp': 'vim'}
-
+let g:winclipper_register_path='/media/sf_host-mfridh/vimregister.txt'
 
 " https://justin.abrah.ms/vim/vim_and_python.html
 " NERD_tree
