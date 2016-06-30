@@ -96,7 +96,10 @@ Plugin 'godlygeek/tabular'
 " .aurora syntax plugin
 Plugin 'grimreaper/vim-aurora-syntax'
 
+" Terraform plug and snippets
 Plugin 'hashivim/vim-terraform'
+Plugin 'frimik/ultisnips-terraform-snippets'
+
 
 call vundle#end()
 filetype plugin indent on     " required
