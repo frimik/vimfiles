@@ -188,20 +188,6 @@ autocmd FileType ruby set filetype=ruby.eruby.chef
 autocmd FileType eruby set filetype=eruby.chef
 autocmd BufRead,BufNewFile {Gemfile,Vagrantfile,Berksfile} set ft=ruby
 
-" Omnicomplete and SuperTab settings
-set omnifunc=syntaxcomplete#Complete
-
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType ruby let g:rubycomplete_buffer_loading=1
-autocmd FileType ruby let g:rubycomplete_classes_in_global=1
-
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"autocmd FileType python setlocal shiftwidth=4
-
-" http://vim.wikia.com/wiki/Omni_completion_popup_menu
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-"let g:SuperTabDefaultCompletionType = "context"
-
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
@@ -238,11 +224,12 @@ set wildignore+=*/coverage/*
 
 """ UltiSnips begin
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsListSnippets='<c-tab>'
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit='vertical'
 """ UltiSnips end
 
