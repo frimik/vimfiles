@@ -35,22 +35,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 " Plugin 'garbas/vim-snipmate'
 
-""" UltiSnips begin
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-""" UltiSnips end
-
 Plugin 'vadv/vim-chef'
 
 Plugin 'kien/ctrlp.vim'
@@ -95,6 +79,10 @@ Plugin 'godlygeek/tabular'
 
 " .aurora syntax plugin
 Plugin 'grimreaper/vim-aurora-syntax'
+
+Plugin 'SirVer/ultisnips'
+
+Plugin 'honza/vim-snippets'
 
 " Terraform plug and snippets
 Plugin 'hashivim/vim-terraform'
@@ -247,3 +235,14 @@ let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
+
+""" UltiSnips begin
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+""" UltiSnips end
+
