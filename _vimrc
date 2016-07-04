@@ -88,6 +88,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'hashivim/vim-terraform'
 Plugin 'frimik/ultisnips-terraform-snippets'
 
+Plugin 'file:///home/mfridh/Documents/dev/ultisnips-fridh-snippets'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -231,6 +232,7 @@ let g:UltiSnipsListSnippets='<c-b>'
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsSnippetsDir='~/.vim/bundle/ultisnips-fridh-snippets/UltiSnips'
 """ UltiSnips end
 
 
