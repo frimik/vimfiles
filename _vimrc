@@ -37,7 +37,8 @@ Plugin 'tomtom/tlib_vim'
 
 Plugin 'vadv/vim-chef'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'voronkovich/ctrlp-nerdtree.vim'
 Plugin 'tpope/vim-sensible'
 
 Plugin 'Lokaltog/vim-distinguished'
@@ -222,6 +223,18 @@ let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
+
+fun! CtrlPOrNERDTree()
+  if g:NERDTree.IsOpen()
+    CtrlPNerdTree
+  else
+    CtrlP
+  endif
+endfun
+
+command! CtrlPOrNERDTree call CtrlPOrNERDTree()
+
+let g:ctrlp_cmd = 'CtrlPOrNERDTree'
 
 """ UltiSnips begin
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
