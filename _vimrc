@@ -87,9 +87,11 @@ Plugin 'honza/vim-snippets'
 
 " Terraform plug and snippets
 Plugin 'hashivim/vim-terraform'
-Plugin 'frimik/ultisnips-terraform-snippets'
 
 Plugin 'file:///home/mfridh/Documents/dev/ultisnips-fridh-snippets'
+
+Plugin 'valloric/YouCompleteMe'
+
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -212,6 +214,7 @@ nnoremap <silent> <c-'> :call MatchCaseTag()<CR>
 let g:pymode_virtualenv = 1
 " workaround for https://github.com/klen/python-mode/issues/342
 let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
 
 " easier moving of code blocks
 " https://www.youtube.com/watch?v=YhqsjUUHj6g
@@ -248,4 +251,7 @@ let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/bundle/ultisnips-fridh-snippets/UltiSnips'
 """ UltiSnips end
 
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_key_list_accept_completion = ['<C-y>']
 
