@@ -124,13 +124,6 @@ set csto=1
 let g:easytags_dynamic_files = 1
 set cpoptions += "d"
 
-" taglist, (currently replaced by tagbar plugin)
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_File_Fold_Auto_Close = 1
-map <F7> :TlistToggle<CR>
-
 " Tagbar config
 nmap <F8> :TagbarToggle<CR>
 
@@ -254,4 +247,25 @@ let g:UltiSnipsSnippetsDir='~/.vim/bundle/ultisnips-fridh-snippets/UltiSnips'
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:ycm_key_list_accept_completion = ['<C-y>']
+let g:ycm_python_binary_path = 'python'
 
+" Folding rules {{{
+set foldenable                  " enable folding
+set foldcolumn=2                " add a fold column
+set foldmethod=marker           " detect fold levels based on indent
+set foldlevelstart=99           " start out with everything unfolded
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+																" which commands trigger auto-unfold
+
+" Mappings to easily toggle fold levels
+nnoremap <silent> z0 :set foldlevel=0<cr>
+nnoremap <silent> z1 :set foldlevel=1<cr>
+nnoremap <silent> z2 :set foldlevel=2<cr>
+nnoremap <silent> z3 :set foldlevel=3<cr>
+nnoremap <silent> z4 :set foldlevel=4<cr>
+nnoremap <silent> z5 :set foldlevel=5<cr>
+nnoremap <silent> z6 :set foldlevel=6<cr>
+nnoremap <silent> z7 :set foldlevel=7<cr>
+nnoremap <silent> z8 :set foldlevel=8<cr>
+nnoremap <silent> z9 :set foldlevel=9<cr>
+" }}}
