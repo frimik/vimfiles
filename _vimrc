@@ -88,7 +88,7 @@ Plugin 'honza/vim-snippets'
 " Terraform plug and snippets
 Plugin 'hashivim/vim-terraform'
 
-Plugin 'file:///home/mfridh/Documents/dev/ultisnips-fridh-snippets'
+Plugin 'frimik/ultisnips-fridh-snippets'
 
 Plugin 'valloric/YouCompleteMe'
 
