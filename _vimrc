@@ -14,7 +14,7 @@ call vundle#begin()
 "call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between here and filetype plugin indent on.
@@ -24,8 +24,7 @@ Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
-" scripts not on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
@@ -251,6 +250,8 @@ let g:ycm_python_binary_path = 'python'
 let g:ycm_autoclose_preview_window_after_completion=1
 " go to definition with ,g
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" list references with ,h
+map <leader>h  :YcmCompleter GotoReferences<CR>
 
 
 " Folding rules {{{
