@@ -4,9 +4,9 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 if has("unix") && !has("win32unix")
-  set rtp+=~/.vim/bundle/vundle/
+  set rtp+=~/.vim/bundle/Vundle.vim/
 else
-  set rtp+=~/vimfiles/bundle/vundle/
+  set rtp+=~/vimfiles/bundle/Vundle.vim/
 endif
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -53,7 +53,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'klen/python-mode'
 
 Plugin 'frimik/vim-winclipper', {'rtp': 'vim'}
-let g:winclipper_register_path='/media/sf_host-mfridh/vimregister.txt'
+let g:winclipper_register_path='/vagrant/vimregister.txt'
 
 " https://justin.abrah.ms/vim/vim_and_python.html
 " NERD_tree
@@ -63,6 +63,8 @@ Plugin 'majutsushi/tagbar'
 
 " Adaptations of the molokai colorscheme
 Plugin 'sentientmachine/Pretty-Vim-Python'
+" https://github.com/jnurmine/Zenburn
+Plugin 'jnurmine/Zenburn'
 
 Plugin 'vim-scripts/EasyGrep'
 
@@ -91,6 +93,7 @@ Plugin 'frimik/ultisnips-fridh-snippets'
 
 Plugin 'valloric/YouCompleteMe'
 
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -136,8 +139,33 @@ let NERDTreeShowBookmarks=1
 map <silent> <F3> :NERDTreeToggle<CR>
 "nmap <silent> <F3> :NERDTreeToggle<CR>
 
-silent! colorscheme molokai
-set background=dark
+
+if has('gui_running')
+  set background=dark
+  silent! colorscheme solarized
+else
+  silent! colors zenburn
+endif
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                
+              
+            
+          
+        
+      
+    
+  
+
+" silent! colorscheme molokai
 " fix colors for indentline
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
