@@ -279,7 +279,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " go to definition with ,g
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " list references with ,h
-map <leader>h  :YcmCompleter GotoReferences<CR>
+map <leader>h  :YcmCompleter GoToReferences<CR>
 
 
 " Folding rules {{{
