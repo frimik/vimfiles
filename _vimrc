@@ -91,7 +91,8 @@ Plugin 'hashivim/vim-terraform'
 
 Plugin 'frimik/ultisnips-fridh-snippets'
 
-Plugin 'valloric/YouCompleteMe'
+"Plugin 'valloric/YouCompleteMe'
+Plugin 'oblitum/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
 
@@ -170,6 +171,7 @@ endif
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
+autocmd FileType yaml IndentGuidesEnable
 
 
 set ts=2
