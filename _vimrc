@@ -96,6 +96,8 @@ Plugin 'oblitum/YouCompleteMe'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'Modeliner'
+
 call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
