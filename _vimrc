@@ -49,6 +49,8 @@ Plugin 'ConflictMotions'
 Plugin 'elzr/vim-json'
 
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 Plugin 'klen/python-mode'
 
